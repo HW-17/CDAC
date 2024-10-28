@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select id="r">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>Javascript</option>
+            <option>Bootstrap</option>
+            <option>MongoDB</option>
+            <option>NodeJs</option>
+        </select>
+        <input type="button" value="Remove Item" onclick="Remove()">
+    </form>
+    <script>
+        function Remove()
+        {
+            var e=document.getElementById("r");
+            e.remove(e.selectedIndex)
+        }
+    </script>
+</body>
+</html>
