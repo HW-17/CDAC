@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="runButton">Run Calculation </button>
+    <div id="output"></div>
+    <script>
+        function forEachElement(array,callback){
+            for(let i=0;i<array.length;i++)
+        {
+            callback(array[i],i);
+        }
+        }
+        const myArray=[1,2,3,4,5];
+        document.getElementById('runButton').addEventListener('click',function(){
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML='';
+
+        forEachElement(myArray,function(element,index){
+            const result=element*2;
+            outputDiv.innerHTML += `index: ${index},result:${result}<br>`;
+        });
+    });
+    </script>
+</body>
+</html>
